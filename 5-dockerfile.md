@@ -53,14 +53,15 @@ docker build -t <nombre imagen>:<tag> .
 ### Ejecutar el archivo Dockerfile y construir una imagen en la versión 1.0
 No olvides verificar en qué directorio se encuentra el archivo Dockerfile
 ```
-
+docker inspect img:1.0
 ```
 
 **¿Cuántos pasos se han ejecutado?**
-# RESPONDER 
+# Dos pasos sin modificar nada. 
 
 ### Inspeccionar la imagen creada
 # COMPLETAR CON UNA CAPTURA
+<img width="611" height="887" alt="image" src="https://github.com/user-attachments/assets/3cecb976-7fde-47b9-8090-98baf068c854" />
 
 **Modificar el archivo index.html para incluir su nombre y luego crear una nueva versión de la imagen anterior**
 **¿Cuántos pasos se han ejecutado? ¿Observa algo diferente en la creación de la imagen**
@@ -75,14 +76,14 @@ Docker usa un mecanismo de caché cuando crea imágenes para acelerar el proceso
 
 ### Crear un contenedor a partir de las imagen creada, mapear todos los puertos
 ```
-
+docker run --name Contenedor -d -P img:1.1
 ```
 
 ### ¿Con que puerto host se está realizando el mapeo?
-# COMPLETAR CON LA RESPUESTA
+# Con el puerto 32768
 
 **¿Qué es una imagen huérfana?**
-# COMPLETAR CON LA RESPUESTA
+# Es una imagen que no está etiquetada ni referenciada por ningún contenedor.
 
 ### Identificar imágenes huérfanas
 ```
